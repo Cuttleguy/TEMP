@@ -26,3 +26,6 @@ html, body {
   .card{
     color: black;
   }
+  img{
+    width:500px;
+  }
