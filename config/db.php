@@ -1,9 +1,15 @@
 <?php 
 
+
+$dsn="mysql:host=localhost;dbname=login-project";
+ $username="root";
+ $password="";
 try {
-$dsn="mysql:host=localhost;dbname=login-project"
- 
-  $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo= new PDO($dsn,$username,$password);
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+} catch (\Throwable $th) {
+    //throw $th;
+}
 
   
  
@@ -12,8 +18,5 @@ $dsn="mysql:host=localhost;dbname=login-project"
   
     
 
-} catch (PDOException $ex) {
-  echo $ex->getMessage();
-}
 
 ?>
