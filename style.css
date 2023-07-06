@@ -1,0 +1,28 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    margin:0cm;
+  }
+  body
+  {
+    background-color: orange;
+    
+  }
+  nav{
+    background-color: royalblue;
+    padding: 1cm;
+    color: white;
+  }
+  a{
+    text-decoration: none;
+    color: white;
+    size: 20pt;
+  }
+  nav li{
+    list-style: none;
+    display: inline-block;
+    margin:1%
+  }
+  .card{
+    color: black;
+  }
