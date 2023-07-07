@@ -7,8 +7,12 @@ $dsn="mysql:host=localhost;dbname=login-project";
 try {
     $pdo= new PDO($dsn,$username,$password);
     $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-} catch (\Throwable $th) {
-    //throw $th;
+    $pdo->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE,PDO::FETCH_OBJ);
+    // $pdo->setAttribute(PDO::ATTR_STATEMENT_CLASS, array('DBStatement',array($pdo)));
+    echo("YOU HAVE CONNECTED");
+} catch (PDOException $e) {
+    $errorMessage=$e->getMessage();
+    echo $errorMessage;
 }
 
   
